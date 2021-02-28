@@ -1,13 +1,13 @@
 // slider
 $(function() {
-	$('.foter__cards').slick({
-		infinite: true,
-		slidesToShow: 7,
-		slidesToScroll: 1,
-		arrows: false,
-		cssEase: 'linear',
-		autoplay: true,
-		autoplaySpeed: 3000
+		$('.foter__cards').slick({
+				infinite: true,
+				slidesToShow: 7,
+				slidesToScroll: 1,
+				arrows: false,
+				cssEase: 'linear',
+				autoplay: true,
+				autoplaySpeed: 3000
 	});
 
 });
