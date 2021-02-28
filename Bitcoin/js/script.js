@@ -1,13 +1,13 @@
 // slider
 $(function() {
-		$('.foter__cards').slick({
-				infinite: true,
-				slidesToShow: 7,
-				slidesToScroll: 1,
-				arrows: false,
-				cssEase: 'linear',
-				autoplay: true,
-				autoplaySpeed: 3000
+	$('.foter__cards').slick({
+		infinite: true,
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		arrows: false,
+		cssEase: 'linear',
+		autoplay: true,
+		autoplaySpeed: 3000
 	});
 
 });
@@ -61,11 +61,12 @@ const modalTrigger = document.querySelector('[data-popup]'),
 // popup-dataShow
    modalTrigger.addEventListener('click', (e) => {
 	e.preventDefault();
-	let firstName = document.querySelector(".firstName-input");
-	let lastName = document.querySelector(".lastName-input");
-	let email = document.querySelector(".email-input");
-	document.querySelector(".firstName-data").innerHTML =`First name: ${firstName.value}`;
-	document.querySelector(".lastName-data").innerHTML =`Last name: ${lastName.value}`;
-	document.querySelector(".email-data").innerHTML =`Email: ${email.value}`;
-	});
+
+	let modal__input = document.querySelectorAll(".modal__input"),
+		popup__data = document.querySelectorAll(".popup__data");
+
+		modal__input.forEach(function(item, i) {
+		popup__data.item(i).innerText =`${item.value}`;
+	    	item.value = "";
+   });
 
